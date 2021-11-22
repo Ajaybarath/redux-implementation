@@ -2,6 +2,7 @@ import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { addName } from '../actions';
+import NameList from './nameList';
 
 function Name() {
 
@@ -22,10 +23,8 @@ function Name() {
                     dispatch(addName(name))
                 }}> Add</button>
                 <h3>Name List</h3>
-                {nameList.map(element => {
-                    return <h4>{element}</h4>
-
-                })}</div>
+                <NameList />
+            </div>
 
 
         </div>

@@ -2,6 +2,7 @@ import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { addToDo } from '../actions';
+import ToDoList from './todoList';
 
 function ToDo() {
 
@@ -22,10 +23,8 @@ function ToDo() {
           dispatch(addToDo(todo))
         }}> Add</button>
         <h3>TODo List</h3>
-        {todoList.map(element => {
-          return <h4>{element}</h4>
-
-        })}</div>
+        <ToDoList />
+        </div>
 
     </div>
   );
